@@ -1,0 +1,4 @@
+0.007 2017-09-08 01:20:33-0400
+  Refactoring
+    - Split out ChartClicker plugin to separate distribution.
+      See <https://github.com/EntropyOrg/p5-Devel-IPerl/pull/76>.
