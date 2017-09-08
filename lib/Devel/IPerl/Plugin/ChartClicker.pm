@@ -42,7 +42,7 @@ sub iperl_data_representations {
 	my $tmp = File::Temp->new( SUFFIX => $suffix );
 	my $tmp_filename = $tmp->filename;
 	capture_stderr( sub {
-        $cc->write_output( $tmp_filename );
+		$cc->write_output( $tmp_filename );
 	});
 
 	return $displayable->new( filename => $tmp_filename )->iperl_data_representations;
