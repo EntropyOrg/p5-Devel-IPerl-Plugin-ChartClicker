@@ -4,6 +4,9 @@ package Devel::IPerl::Plugin::ChartClicker;
 use strict;
 use warnings;
 
+use Chart::Clicker;
+use Role::Tiny;
+
 our $IPerl_compat = 1;
 
 our $IPerl_format_info = {
@@ -12,10 +15,6 @@ our $IPerl_format_info = {
 };
 
 sub register {
-	# needed for the plugin
-	require Chart::Clicker;
-	require Role::Tiny;
-
 	Role::Tiny->apply_roles_to_package( 'Chart::Clicker', q(Devel::IPerl::Plugin::ChartClicker::IPerlRole) );
 }
 
