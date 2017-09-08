@@ -6,6 +6,8 @@ use warnings;
 
 use Chart::Clicker;
 use Role::Tiny;
+use Devel::IPerl::Display::SVG;
+use Devel::IPerl::Display::PNG;
 
 our $IPerl_compat = 1;
 
