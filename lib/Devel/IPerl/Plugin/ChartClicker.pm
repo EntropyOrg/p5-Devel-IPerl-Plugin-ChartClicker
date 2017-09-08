@@ -1,4 +1,5 @@
 package Devel::IPerl::Plugin::ChartClicker;
+# ABSTRACT: IPerl plugin to make Chart::Clicker charts displayable
 
 use strict;
 use warnings;
