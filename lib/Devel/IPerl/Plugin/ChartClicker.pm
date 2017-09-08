@@ -1,11 +1,13 @@
 package Devel::IPerl::Plugin::ChartClicker;
 # ABSTRACT: IPerl plugin to make Chart::Clicker charts displayable
-$Devel::IPerl::Plugin::ChartClicker::VERSION = '0.007';
+$Devel::IPerl::Plugin::ChartClicker::VERSION = '0.008';
 use strict;
 use warnings;
 
 use Chart::Clicker;
 use Role::Tiny;
+use Devel::IPerl::Display::SVG;
+use Devel::IPerl::Display::PNG;
 
 our $IPerl_compat = 1;
 
@@ -64,7 +66,7 @@ Devel::IPerl::Plugin::ChartClicker - IPerl plugin to make Chart::Clicker charts 
 
 =head1 VERSION
 
-version 0.007
+version 0.008
 
 =head1 AUTHORS
 

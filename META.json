@@ -25,6 +25,8 @@
          "requires" : {
             "Capture::Tiny" : "0",
             "Chart::Clicker" : "0",
+            "Devel::IPerl::Display::PNG" : "0",
+            "Devel::IPerl::Display::SVG" : "0",
             "File::Temp" : "0",
             "Moo::Role" : "0",
             "Role::Tiny" : "0",
@@ -35,7 +37,6 @@
       },
       "test" : {
          "requires" : {
-            "IPerl" : "0",
             "Test::Most" : "0",
             "perl" : "5.006"
          }
@@ -50,7 +51,7 @@
          "web" : "https://github.com/EntropyOrg/p5-Devel-IPerl-Plugin-ChartClicker"
       }
    },
-   "version" : "0.007",
+   "version" : "0.008",
    "x_serialization_backend" : "Cpanel::JSON::XS version 3.0238"
 }
 
