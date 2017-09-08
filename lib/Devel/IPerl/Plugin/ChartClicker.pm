@@ -1,7 +1,11 @@
 package Devel::IPerl::Plugin::ChartClicker;
+# ABSTRACT: IPerl plugin to make Chart::Clicker charts displayable
 
 use strict;
 use warnings;
+
+use Chart::Clicker;
+use Role::Tiny;
 
 our $IPerl_compat = 1;
 
@@ -11,10 +15,6 @@ our $IPerl_format_info = {
 };
 
 sub register {
-	# needed for the plugin
-	require Chart::Clicker;
-	require Role::Tiny;
-
 	Role::Tiny->apply_roles_to_package( 'Chart::Clicker', q(Devel::IPerl::Plugin::ChartClicker::IPerlRole) );
 }
 
@@ -42,7 +42,7 @@ sub iperl_data_representations {
 	my $tmp = File::Temp->new( SUFFIX => $suffix );
 	my $tmp_filename = $tmp->filename;
 	capture_stderr( sub {
-        $cc->write_output( $tmp_filename );
+		$cc->write_output( $tmp_filename );
 	});
 
 	return $displayable->new( filename => $tmp_filename )->iperl_data_representations;
